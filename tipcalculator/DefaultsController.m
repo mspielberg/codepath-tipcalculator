@@ -21,7 +21,7 @@
     BOOL defaultTipExists = [defaults objectForKey:@"defaultTip"];
     NSInteger defaultTip = [defaults integerForKey:@"defaultTip"];
     
-    if (!defaultTipExists || defaultTip <= 25) {
+    if (defaultTipExists && defaultTip <= 25) {
         return defaultTip;
     } else {
         return 15;
